@@ -2,6 +2,14 @@
 
 Splitsies is a CLI Tool that is to be used to help break a large CSV into smaller CSV files, each generated file to have their names be derived from a column value. 
 
+I wrote this to be able to split files before adding them to Pachyderm.
+
+### Installation
+
+```
+go get -u github.com/saadullahsaeed/splitsies
+```
+
 ### Usage
 
 Source File:
@@ -21,20 +29,22 @@ splitsies --header=true --out-file-prefix=day_ --out-file-col-index=0 --out-file
 ```
 
 Will generate three files following files:
+
+Filename: day_2019-11-01.csv
+
 ```
-Filename: 2019-11-01.csv
 2019-11-01,1001,click
 2019-11-01,1002,click
 ```
 
+Filename: day_2019-11-02.csv
 ```
-Filename: 2019-11-02.csv
 2019-11-02,1003,click
 2019-11-02,1004,click
 ```
 
+Filename: day_2019-11-03.csv
 ```
-Filename: 2019-11-03.csv
 2019-11-03,1004,click
 ```
 
